@@ -1,22 +1,27 @@
 package Funcionarios;
 
 public class PJ extends Funcionario {
-    private Double projetos;
+    private Integer horas;
+    private Double valorHora;
 
-    protected PJ(String nome, Double salarioBase, Double projetos) {
+    protected PJ(String nome, Double salarioBase, Integer projetos, Double valorHora) {
         super(nome, salarioBase);
-        this.projetos = projetos;
+        this.horas = projetos;
+        this.valorHora = valorHora;
     }
 
-    public Double getProjetos() {
-        return projetos;
+    public Integer getHoras() {
+        return horas;
     }
 
     @Override
     public Double pagamentos() {
-        return salarioBase += projetos;
+        return salarioBase + (horas * valorHora);
     }
 
 
+    public Double getValorHora() {
+        return valorHora;
+    }
 }
 
