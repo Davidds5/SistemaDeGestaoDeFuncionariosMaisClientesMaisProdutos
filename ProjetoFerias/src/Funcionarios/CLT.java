@@ -4,7 +4,7 @@ public class CLT extends Funcionario{
     private Double beneficios;
 
 
-    protected CLT(String nome, Double salarioBase, Double beneficios) {
+    public  CLT(String nome, Double salarioBase, Double beneficios) {
         super(nome, salarioBase);
         this.beneficios = beneficios;
     }
