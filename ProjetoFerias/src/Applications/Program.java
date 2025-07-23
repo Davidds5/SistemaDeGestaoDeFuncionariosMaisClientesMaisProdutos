@@ -7,6 +7,7 @@ import Produtos.Produtos;
 import Usuario.Usuario;
 
 import java.util.*;
+import java.util.spi.AbstractResourceBundleProvider;
 
 public class Program {
     public static void main(String[] args) {
@@ -31,6 +32,8 @@ public class Program {
             System.out.println("__________________________________________________________________");
             switch (op){
 
+                // usando o metodo do, eu farei o menu roda ate ser digitado o numero 0
+                // isso vale para todas as partes
 
                 case 1:
                     int opFuncionario;
@@ -60,13 +63,31 @@ public class Program {
                               buscaFuncionario(sc, funcionarioList);
                               break;
                           case 4:
+                              removerFuncionario(sc, funcionarioList);
+                              break;
                           case 0:
+                              System.out.println("Programa sendo encerrado...");
+                              break;
+                          default:
+                              System.out.println("Opcao invalida, tente novamente.");
                       }
                   }while(opFuncionario != 0);
 
+                  break;
 
 
                 case 2:
+                    int opCliente;
+                    do {
+                        System.out.println();
+                        System.out.println();
+                        System.out.println();
+                        System.out.println();
+                        System.out.println();
+                        System.out.println();
+                        opCliente = sc.nextInt();
+                    }while (opCliente != 0);
+
                 case 3:
                 case 0:
 
@@ -80,6 +101,7 @@ public class Program {
 
     }
 
+    // PARTE DA CLASS FUNCIONARIO
     // metodo apenas usado para o cadrasto de funcionario
     public static void cadrastaFuncionario(Scanner sc, List<Funcionario> funcionarioList){
         System.out.println("=== CADASTRADO DE FUNCIONARIO ===");
@@ -163,4 +185,5 @@ public class Program {
         }
 
     }
+
 }
